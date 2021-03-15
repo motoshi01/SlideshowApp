@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ex4-Sq-wPU">
+                                <rect key="frame" x="263" y="30" width="270" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAF-db-bNe">
+                                        <rect key="frame" x="-53" y="-246" width="375" height="812"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZg-Rz-hBj">
+                                        <rect key="frame" x="15" y="70" width="240" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wWK-kX-GJL" appends="YES" id="MOI-rE-Lst"/>
+                                        </connections>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-8s-s1n" userLabel="btn_back">
+                                        <rect key="frame" x="15" y="262" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_back"/>
+                                        <connections>
+                                            <action selector="btn_baxk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tq3-oG-Whu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhu-dT-rEV" userLabel="btn_play">
+                                        <rect key="frame" x="109" y="262" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_play"/>
+                                        <connections>
+                                            <action selector="btn_play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AzK-bM-mjs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzd-uM-RyQ" userLabel="btn_next">
+                                        <rect key="frame" x="205" y="262" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_next"/>
+                                        <connections>
+                                            <action selector="btn_next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGg-uA-5RG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ImageInfo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpD-FF-I57" userLabel="ImageInfo">
+                                        <rect key="frame" x="40" y="233" width="190" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="ImageInfo" destination="CpD-FF-I57" id="5ua-4A-ATX"/>
+                        <outlet property="ImageView" destination="iZg-Rz-hBj" id="tib-6B-vJr"/>
+                        <outlet property="btn_back" destination="GHB-8s-s1n" id="RN8-mp-znQ"/>
+                        <outlet property="btn_next" destination="Dzd-uM-RyQ" id="uyW-Js-WkL"/>
+                        <outlet property="btn_play" destination="xhu-dT-rEV" id="BOQ-Xl-jXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wWK-kX-GJL">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="yub-7x-8Iu"/>
+                        <segue destination="aKv-r1-N4j" kind="show" id="nQF-An-d7w"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="132" y="114.53201970443351"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="R7B-pT-NJh">
+            <objects>
+                <viewController id="aKv-r1-N4j" customClass="ViewController2" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oke-vT-dfF">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-R0-kq5">
+                                <rect key="frame" x="-11" y="0.0" width="724" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-eU-7Yh">
+                                <rect key="frame" x="381" y="254" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="aEP-60-6Lu"/>
+                                    <constraint firstAttribute="height" constant="50" id="jvk-jx-2E9"/>
+                                </constraints>
+                                <state key="normal" image="btn_home"/>
+                                <connections>
+                                    <segue destination="CRU-vW-hjc" kind="unwind" unwindAction="unwind:" id="Kut-C9-BeQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pxc-eN-5sN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pxc-eN-5sN" firstAttribute="bottom" secondItem="ds3-eU-7Yh" secondAttribute="bottom" constant="50" id="FbB-gg-del"/>
+                            <constraint firstAttribute="bottom" secondItem="hMp-R0-kq5" secondAttribute="bottom" id="Lpg-3Q-Lbe"/>
+                            <constraint firstItem="hMp-R0-kq5" firstAttribute="trailing" secondItem="pxc-eN-5sN" secondAttribute="trailing" id="ZIw-cO-Wtj"/>
+                            <constraint firstItem="hMp-R0-kq5" firstAttribute="top" secondItem="pxc-eN-5sN" secondAttribute="top" id="cFC-QW-zHD"/>
+                            <constraint firstItem="hMp-R0-kq5" firstAttribute="leading" secondItem="pxc-eN-5sN" secondAttribute="leading" id="gc8-9i-LvV"/>
+                            <constraint firstItem="ds3-eU-7Yh" firstAttribute="centerX" secondItem="oke-vT-dfF" secondAttribute="centerX" id="h1p-AN-vUa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="giK-yp-lSg"/>
+                    <connections>
+                        <outlet property="BigImageView" destination="hMp-R0-kq5" id="nDo-qU-bZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXS-f2-oZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CRU-vW-hjc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="113.79310344827587"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_back" width="60" height="60"/>
+        <image name="btn_home" width="60" height="60"/>
+        <image name="btn_next" width="60" height="60"/>
+        <image name="btn_play" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
